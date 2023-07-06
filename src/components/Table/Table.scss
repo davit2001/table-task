@@ -1,0 +1,77 @@
+$minmax: minmax(150px, 1fr);
+$border-color: #cccccc;
+
+* {
+    box-sizing: border-box;
+}
+
+.table-wrapper {
+    margin-bottom: 25px;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    display: grid;
+    overflow: auto;
+    align-items: center;
+    grid-template-columns: 130px $minmax $minmax $minmax $minmax;
+    border-top: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    background-color: white;
+}
+
+.table .tableBody,
+.table .row {
+    display: contents;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+}
+
+.table .tableHeading {
+    position: relative;
+    font-size: 18px;
+    background-color: #e2e2e2;
+}
+
+.table .tableHeading,
+.table .cell {
+    padding: 16px 8px;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    width: 100%;
+    cursor: pointer;
+}
+
+.table .tableHeading p,
+.table .cell p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+}
+
+.table .row .cell {
+    border-top: 1px solid #ccc;
+}
+
+.resize-handle {
+    display: block;
+    position: absolute;
+    cursor: col-resize;
+    width: 7px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border-right: 2px solid transparent;
+}
+
+.resize-handle:hover {
+    border-color: #9abcdf;
+}
+
+.resize-handle.active {
+    border-color: #517ea5;
+}
