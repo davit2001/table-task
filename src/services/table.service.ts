@@ -28,6 +28,6 @@ export const getTable = async () => {
 
     return null
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error.message)
   }
 };

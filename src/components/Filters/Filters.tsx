@@ -10,23 +10,23 @@ type FiltersProps = {
 };
 
 const Filters: FC<FiltersProps> = ({ applyFilter }) => {
-  const onChangeId = useCallback((value) => {
+  const onChangeId = useCallback(value => {
     applyFilter(Number(value), 'id');
   }, [applyFilter]);
 
-  const onChangeName = useCallback((value) => {
+  const onChangeName = useCallback(value => {
     applyFilter(value, 'name');
   }, [applyFilter]);
 
-  const onChangeDescription = useCallback((value) => {
+  const onChangeDescription = useCallback(value => {
     applyFilter(value, 'description');
   }, [applyFilter]);
 
-  const onChangeDatePicker = useCallback((value) => {
+  const onChangeDatePicker = useCallback(value => {
     applyFilter(value, 'datePicker');
   }, [applyFilter]);
 
-  const onChangeStatus = useCallback((value) => {
+  const onChangeStatus = useCallback(value => {
     applyFilter(value, 'status');
   }, [applyFilter]);
 
